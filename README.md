@@ -27,3 +27,24 @@ Options:
 -q, --quiet     Hide progress display
 -h, --help      Display help
 ```
+
+## download example1
+
+```
+gdown xxxxxxxxxxxxx -O my_file.txt
+```
+
+## download example2
+
+From Your Original HTTP Server
+
+```
+gdown xxxxxxxxxxxxx -O my_file.txt -s http://host.docker.internal:3000 
+```
+
+
+# uninstall
+
+```
+pip uninstall qdown -y
+```
