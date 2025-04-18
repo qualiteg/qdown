@@ -17,7 +17,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "qdown=qdown.qdown:main",
+            "qdown=qdown.gdown:main",  # ファイル名をgdown.pyに修正
         ],
     },
     classifiers=[

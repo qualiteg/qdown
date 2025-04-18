@@ -8,6 +8,12 @@ A Python client for downloading files from QualitegDrive operated by Qualiteg In
 pip install qdown
 ```
 
+or 
+
+```
+pip install git+https://github.com/qualiteg/qdown.git
+```
+
 # usage
 
 ```
