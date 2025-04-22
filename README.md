@@ -31,7 +31,7 @@ Options:
 ## download example1
 
 ```
-gdown xxxxxxxxxxxxx -O my_file.txt
+qdown xxxxxxxxxxxxx -O my_file.txt
 ```
 
 ## download example2
@@ -39,7 +39,7 @@ gdown xxxxxxxxxxxxx -O my_file.txt
 From Your Original HTTP Server
 
 ```
-gdown xxxxxxxxxxxxx -O my_file.txt -s http://host.docker.internal:3000 
+qdown xxxxxxxxxxxxx -O my_file.txt -s http://host.docker.internal:3000 
 ```
 
 

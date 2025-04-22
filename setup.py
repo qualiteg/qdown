@@ -10,10 +10,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="qdown",
-    version="1.0.1",
+    version="1.0.3",  # バージョン更新
     description="Client for QualitegDrive",
     long_description=long_description,
-    long_description_content_type="text/markdown",  # これが重要
+    long_description_content_type="text/markdown",
     author="Qualiteg Inc.",
     author_email="qualiteger@qualiteg.com",
     url="https://github.com/qualiteg/qdown",
@@ -24,7 +24,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "qdown=qdown.gdown:main",
+            "qdown=qdown.qdown:main",
         ],
     },
     classifiers=[
