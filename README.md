@@ -2,6 +2,8 @@
 
 A Python client for downloading files from QualitegDrive operated by Qualiteg Inc.
 
+[Japanese](README.ja.md)
+
 # install
 
 ```
