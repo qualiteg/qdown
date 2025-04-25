@@ -250,10 +250,29 @@ class QDown:
 
             except httpx.RequestError as e:
                 print(f"エラー: リクエストに失敗しました - {e}", file=sys.stderr)
+                if "Name or service not known" in str(e):
+                    print("WSLで実行しているとき、このDNSエラーに遭遇した場合は以下をお試しください")
+                    print("If you are running this in WSL, please try setting up DNS as follows:", file=sys.stderr)
+                    print("STEP 1: Disable the automatic DNS configuration in WSL2", file=sys.stderr)
+                    print("In WSL bash, run the following to prevent automatic generation of resolv.conf:", file=sys.stderr)
+                    print('sudo sh -c \'cat > /etc/wsl.conf << EOF', file=sys.stderr)
+                    print('[user]', file=sys.stderr)
+                    print('default=mlu', file=sys.stderr)
+                    print('[network]', file=sys.stderr)
+                    print('generateResolvConf = false', file=sys.stderr)
+                    print('EOF\'', file=sys.stderr)
+                    print("STEP 2: Restart WSL from Windows", file=sys.stderr)
+                    print('wsl --shutdown', file=sys.stderr)
+                    print("STEP 3: After restarting WSL, run the following in the shell:", file=sys.stderr)
+                    print('sudo sh -c \'cat > /etc/resolv.conf << EOF', file=sys.stderr)
+                    print('nameserver 8.8.8.8', file=sys.stderr)
+                    print('nameserver 8.8.4.4', file=sys.stderr)
+                    print('EOF\'', file=sys.stderr)
                 return None
             except Exception as e:
                 print(f"エラー: {e}", file=sys.stderr)
                 return None
+
 
 def main():
     parser = argparse.ArgumentParser(
