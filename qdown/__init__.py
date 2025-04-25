@@ -75,9 +75,9 @@ def download(download_url, output_path=None, output_dir=None, server_url="https:
     # QDownクライアントの初期化
     client = QDown(server_url=server_url, quiet=quiet)
 
-    # 非同期ダウンロードを実行
-    return asyncio.run(client.download_by_file_id(
+    # 同期版メソッドを呼び出す
+    return client.download_by_file_id_sync(
         file_id=file_id,
         output=output_path,
         output_dir=output_dir
-    ))
+    )

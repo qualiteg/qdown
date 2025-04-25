@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 from setuptools import setup, find_packages
-import os
 
 # README.mdの内容を読み込む
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -10,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="qdown",
-    version="1.0.3",  # バージョン更新
+    version="1.0.4",
     description="Client for QualitegDrive",
     long_description=long_description,
     long_description_content_type="text/markdown",
